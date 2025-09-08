@@ -1,9 +1,20 @@
 @charset "UTF-8";
 /*
     Paleta de Cores
-    Verde: #49A09D
-    Lilás: #5F2C82
+    Cinzas: #242425;
+    Dourado: #816034;
 */
+
+/* Typical Device Breakpoints
+
+Pequenas Telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes Telas: acima de 1200px
+
+*/
+
 
 :root {
     --Cor1: #242425;
@@ -37,15 +48,16 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     overflow: hidden;
+
 
     background-color: white;
     width: 250px;
-    height: 515px;
+    height: 560px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562);
-
+    
+    transform: translate(-50%,-50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
     
@@ -69,17 +81,43 @@ section#login > div#formulario {
 
 form > div.credenciais {
     background-color: #242425;
-    width: 100%;
+    border: 2px solid #242425;
     display: block;
-    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
-form label {
+div.credenciais > span {
+    color: white;
+    width: 40px;
+    padding: 5px;
+    font-size: 1.9em;
+}
+
+div.credenciais > input {
+    background-color: var(--Cor1);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.credenciais > label {
     display: none;
 }
 
-form > input[type=submit] {
+div.credenciais > input:focus-within {
+    background-color: white;
+    border: none;                           
+}
+
+
+form > div.interatividade > input[type=submit] {
     display: block;
     font-size: 1em;
     width: 100%;
@@ -91,11 +129,11 @@ form > input[type=submit] {
     cursor: pointer;
 }
 
-form > input[type=submit]:hover {
+form > div.interatividade > input[type=submit]:hover {
     background-color: rgb(0, 0, 0);
 }
 
-form > a.botao {
+form > div.interatividade > a.botao {
     display: block;
     text-align: center;
     font-size: 1em;

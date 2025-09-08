@@ -12,27 +12,38 @@
 <body>
     <main>
         <section id="login">
-            <div id="imagem">
-            </div>
+            <div id="imagem"></div>
             <div id="formulario">
+
                 <h1>Login</h1>
                 <p>Bem Vindo(a) novamente. Faça login pra acessar sua conta e acessar as configurações do seu ambiente</p>
-                <form action="login.php" method="post">
+                <form action="login.php" method="post" autocomplete="on">
+
+                <!--Campos do Email-->
                 <div class="credenciais">
                     <span class="material-symbols-outlined">encrypted</span>
                     <input type="email" name="login" id="ilogin" placeholder="seuemail@domínio.com" autocomplete="email" required maxlength="30">
+
                     <label for="ilogin">Login</label>
                 </div>
+
+                <!--Campos da Senha-->
                 <div class="credenciais">
                     <span class="material-symbols-outlined">key</span>
-                    <input type="password" name="senha" id="isenha" placeholder="senha" autocomplete="current-password" required minlength="8">
+                    <input type="password" name="senha" id="isenha" placeholder="senha" autocomplete="current-password" required minlength="8" maxlength="30">
+                    
                     <label for="isenha">Senha</label>
-            </div>
-                  <input type="submit" value="Entrar">
-                <a href="esqueci.html" class="botao">
-                    Esqueci a senha <span class="material-symbols-outlined">mail_lock</span>
-                </a>
+                </div>
+
+            <!--Campos da Interatividade-->
+                <div class="interatividade"> 
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">
+                        Esqueci a senha <span class="material-symbols-outlined">mail_lock</span>
+                    </a>
+                </div>
                 </form>
+            </div>
         </section>
     </main>
 </body>
